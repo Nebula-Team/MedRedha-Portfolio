@@ -220,6 +220,90 @@ h6 {
   transform: translateY(0) rotateX(0);
 }
 
+/* Liquid Button */
+
+.btn-liquid {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  top: 560px;
+  position: fixed;
+  width: 200px;
+  height: 50px;
+  border-radius: 27px;
+  letter-spacing: 0.05em;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Bold';
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.btn-liquid .innerbtn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  top: 5px;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-liquid canvas {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  left: -50px;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .btn-liquid {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    top: 530px;
+    position: fixed;
+    width: 160px;
+    height: 40px;
+    border-radius: 27px;
+    letter-spacing: 0.05em;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Bold';
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+  .btn-liquid .innerbtn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    top: 1px;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-liquid canvas {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    bottom: -50px;
+    left: -50px;
+    z-index: 1;
+  }
+}
+
 /* --------------------------------------
    2. Loading
 -----------------------------------------*/
