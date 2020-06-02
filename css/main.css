@@ -65,7 +65,7 @@ h6 {
   font-weight: 400;
 }
 
-/*=========== My Classes ============*/
+/*=========== Main Classes ============*/
 .main-title {
   margin-bottom: 60px;
   position: relative;
@@ -166,6 +166,142 @@ h6 {
   -o-transform: translate(-50%, -50%) scale(1);
   -ms-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: #16c0f0;
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  background: white;
+  font-family: 'Bold';
+  border-radius: 20px;
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+}
+.btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: white;
+  display: block;
+  padding: 0 30px;
+  font-family: 'Bold';
+  line-height: 40px;
+  transition: 0.5s;
+  position: relative;
+  background: #16c0f0;
+  border-radius: 20px;
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
+}
+
+/* Liquid Button */
+
+.btn-liquid {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  top: 560px;
+  position: fixed;
+  width: 200px;
+  height: 50px;
+  border-radius: 27px;
+  letter-spacing: 0.05em;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Bold';
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.btn-liquid .innerbtn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  top: 5px;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-liquid canvas {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  left: -50px;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .btn-liquid {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    top: 530px;
+    position: fixed;
+    width: 160px;
+    height: 40px;
+    border-radius: 27px;
+    letter-spacing: 0.05em;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Bold';
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+  .btn-liquid .innerbtn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    top: 1px;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-liquid canvas {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    bottom: -50px;
+    left: -50px;
+    z-index: 1;
+  }
 }
 
 /* --------------------------------------
@@ -618,7 +754,7 @@ h6 {
   position: absolute;
   bottom: 80px;
   right: 30px;
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
