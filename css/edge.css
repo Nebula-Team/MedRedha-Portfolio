@@ -385,7 +385,8 @@
   cursor: pointer;
   width: 100px;
   height: 80px;
-  background-color: #f37272;
+  background-color: #222223;
+  opacity: 0.5;
   border-bottom-right-radius: 100%;
 }
 .menu_toggle:active i {
