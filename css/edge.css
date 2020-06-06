@@ -375,7 +375,7 @@
   overflow-y: auto;
   /* padding: 50px 20%; */
 }
-/* basically all styling from now on */
+
 .menu_toggle {
   z-index: 900;
   position: fixed;
