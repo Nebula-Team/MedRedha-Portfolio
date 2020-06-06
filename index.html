@@ -216,6 +216,18 @@
 
     <!-- ========== Scripts ========== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      // elements
+      var $page = $('.page');
+
+      $('.menu_toggle').on('click', function() {
+        $page.toggleClass('shazam');
+      });
+      $('.content').on('click', function() {
+        $page.removeClass('shazam');
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- jQuery -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap Js -->
