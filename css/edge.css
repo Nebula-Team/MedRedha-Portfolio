@@ -360,15 +360,202 @@
 
 /* SIDE MENU */
 
+.menu {
+  --color: #fff;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.menu svg {
+  width: 64px;
+  height: 48px;
+  top: -6px;
+  left: -14px;
+  stroke: var(--color);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  position: absolute;
+}
+.menu svg path {
+  -webkit-transition: stroke-dasharray var(--duration, 0.85s)
+      var(--easing, ease) var(--delay, 0s),
+    stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s);
+  transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s),
+    stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s);
+  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+  stroke-dashoffset: var(--offset, 126px);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.menu svg path:nth-child(2) {
+  --duration: 0.7s;
+  --easing: ease-in;
+  --offset: 100px;
+  --array-2: 74px;
+}
+.menu svg path:nth-child(3) {
+  --offset: 133px;
+  --array-2: 107px;
+}
+.menu.active svg path {
+  --offset: 57px;
+}
+.menu.active svg path:nth-child(1),
+.menu.active svg path:nth-child(3) {
+  --delay: 0.15s;
+  --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+}
+.menu.active svg path:nth-child(2) {
+  --duration: 0.4s;
+  --offset: 2px;
+  --array-1: 1px;
+}
+.menu.active svg path:nth-child(3) {
+  --offset: 58px;
+}
+
+.area {
+  background: #000c40;
+  background: -webkit-linear-gradient(to right, #242424, #000c40);
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
 .page {
   height: 100%;
-  background-color: #584e4a;
+  background: -webkit-linear-gradient(to right, #242424, #000c40);
 }
 .content {
   height: 200%;
   transform-origin: top left;
   transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
-  background-color: #f0f0f0;
+  background-color: transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .content_inner {
   height: 50%;
@@ -385,7 +572,7 @@
   cursor: pointer;
   width: 100px;
   height: 80px;
-  background-color: #222223;
+  background-color: transparent;
   opacity: 0.5;
   border-bottom-right-radius: 100%;
 }
