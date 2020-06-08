@@ -110,7 +110,41 @@
   }
 } */
 
-@media screen and (min-width: 50em) {
+@media screen and (max-width: 600px) {
+  .edge {
+    text-align: right;
+    top: 0;
+    bottom: auto;
+    width: auto;
+    padding: 3em 1.5em 0 0;
+    display: block;
+    font-size: 0.85em;
+    background: transparent;
+  }
+
+  .ball-one,
+  .ball-two,
+  .ball-three,
+  .ball-four,
+  .ball-five,
+  .ball-six,
+  .ball-seven,
+  .ball-eight {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  .edge__deco,
+  .edge__img,
+  .edge__desc,
+  .edge__title {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
   .edge {
     text-align: right;
     top: 0;
