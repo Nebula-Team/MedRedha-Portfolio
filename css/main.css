@@ -4,6 +4,8 @@
   -o-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  margin: 0;
+  padding: 0;
 }
 
 body {
