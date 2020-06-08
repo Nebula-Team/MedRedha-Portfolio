@@ -600,7 +600,8 @@
   background: -webkit-linear-gradient(to right, #242424, #000c40);
 }
 .content {
-  height: 200%;
+  height: 100%;
+  width: 200vw;
   transform-origin: top left;
   transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
   background-color: transparent;
